@@ -313,6 +313,7 @@ footer p
 .mv-img
 {
   width: 70%;
+  height: 100%;
   object-fit: contain;
 }
 
