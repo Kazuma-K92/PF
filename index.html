@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kazuma Katayori Portfolio</title>
+  <meta name=”description” content=”未経験・独学でWeb制作に挑戦する、愛知県名古屋市在住の28歳のポートフォリオ。”>
+  <link rel="stylesheet" type="text/css" href="html5reset-1.6.1.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="#" class="header-logo">Kazuma Katayori</a>
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-list-item"><a href="#">About</a></li>
+          <li class="nav-list-item nav-product">
+            <p>Product</p>
+            <img src="images/down.png">
+            <ul class="product-list">
+              <li class="product-list-item"><a href="#">なかむら参 様</a></li>
+              <li class="product-list-item"><a href="#">Treasure Studio 様</a></li>
+              <li class="product-list-item"><a href="#">ポートフォリオ</a></li>
+            </ul>
+          </li>
+          <li class="nav-list-item"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" type="button">
+        <span class="screen-reader-only">MENU</span>
+      </button>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <section class="mv">
+        <img src="images/hands_yellow.png" class="mv-img">
+        <h1 class="mv-text">Kazuma<br>Katayori<br>Portfolio</h1>
+      </section>
+      <section class="about">
+        <div class="section-wrapper">
+          <div class="top-section-content">
+            <h2 class="top-section-title">About</h2>
+            <p class="top-text">名古屋市在住の好奇心旺盛な28歳。ソフトウェア開発・販売業の会社にプログラマ－として従事。2020年12月に退職に、未経験のWeb業界に挑戦。「心で寄り添い、困っている人に手を差し伸べられる人」を目指す。</p>
+            <div class="btn-wrapper">
+              <a href="#" class="top-btn">詳しく知る</a>
+            </div>
+          </div>
+          <div class="icon-wrapper">
+            <img src="images/icon/about/soccer.png" alt="サッカーボール" class="top-icon soccer">
+            <img src="images/icon/about/badminton.png" alt ="バドミントン" class="top-icon badminton">
+            <img src="images/icon/about/guitar.png" alt="ギター" class="top-icon guitar">
+          </div>
+        </div>
+      </section>
+      <section class="product">
+        <div class="section-wrapper">
+          <div class="top-section-content">
+            <h2 class="top-section-title">Product</h2>
+            <a href="#" class="product-link">
+              <div class="product-link-parent">
+                <img src="images/product/nakamurasan.png" alt="なかむら参様のモックアップ">
+                <div class="product-link-hover">
+                  <h3 class="product-link-title">なかむら参 様</h3>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="product-link">
+              <div class="product-link-parent">
+                <img src="images/product/TreasureStudio.png" alt="TreasureStudio様のモックアップ">
+                <div class="product-link-hover">
+                  <h3 class="product-link-title">Treasure Studio 様</h3>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="product-link">
+              <div class="product-link-parent">
+                <img src="images/product/nakamurasan.png" alt="ポートフォリオのモックアップ">
+                <div class="product-link-hover">
+                  <h3 class="product-link-title">ポートフォリオ</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="icon-wrapper">
+            <img src="images/icon/product/network.png" alt="ネットワーク" class="top-icon network">
+            <img src="images/icon/product/cursol.png" alt="カーソル" class="top-icon cursol">
+            <img src="images/icon/product/mouse.png" alt="マウス" class="top-icon mouse">
+            <img src="images/icon/product/mobile.png" alt="モバイル" class="top-icon mobile">
+            <img src="images/icon/product/pc.png" alt="PC" class="top-icon pc">
+          </div>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="section-wrapper">
+          <div class="top-section-content">
+            <h2 class="top-section-title">Contact</h2>
+            <p class="top-text">当ポートフォリオサイトに関するご質問や、お仕事のご相談（愛知県名古屋市を中心に、雇用していただける企業様を探しております。）など、お気軽にお問い合わせください。</p>
+            <div class="btn-wrapper">
+              <a href="#" class="top-btn">お問い合わせはこちら</a>
+            </div>
+          </div>
+          <div class="icon-wrapper">
+            <img src="images/icon/contact/post.png" alt ="ポスト" class="top-icon post">
+            <img src="images/icon/contact/letter.png" alt="レター" class="top-icon letter">
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>©Kazuma Katayori</p>
+  </footer>
+  <script>
+    ///////////////////////
+    // ハンバーガーメニューのクラストグル
+    $('.hamburger').click(function () {
+      $('header').toggleClass('open');
+      $('html').toggleClass('open');
+    });
+
+    ///////////////////////
+    // ナビゲーションのProductのサブメニュー表示
+    if( window.matchMedia('(min-width: 769px)').matches )
+    {
+      $('.nav-product').hover(
+        function() {
+          //カーソルが重なった時
+          $('.product-list').addClass('open');
+        },
+        function() {
+          //カーソルが離れた時
+          $('.product-list').removeClass('open');
+        }
+      );
+    }
+  </script>
+</body>
+</html>
