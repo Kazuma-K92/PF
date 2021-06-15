@@ -399,6 +399,7 @@ footer p
 {
   position: absolute;
   width: 100px;
+  object-fit: contain;
 }
 
 @media (max-width: 768px)
