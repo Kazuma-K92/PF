@@ -313,7 +313,7 @@ footer p
 .mv-img
 {
   width: 70%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .mv-text
@@ -399,7 +399,7 @@ footer p
 {
   position: absolute;
   width: 100px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 @media (max-width: 768px)
