@@ -162,13 +162,12 @@ nav
     align-items: center;
     justify-content: center;
     transition: left 0.5s;
-    z-index: 1000;
+    /* z-index: 1000; */
   }
   
   .nav-list
   {
     flex-direction: column;
-    /* margin: 60px auto; */
   }
 
   .nav-list-item
