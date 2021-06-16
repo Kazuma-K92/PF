@@ -17,20 +17,20 @@
 <body>
   <header>
     <div class="container">
-      <a href="https://www.google.co.jp/" class="header-logo">Kazuma Katayori</a>
+      <a href="index.html" class="header-logo">Kazuma Katayori</a>
       <nav>
         <ul class="nav-list">
-          <li class="nav-list-item"><a href="https://www.google.co.jp/">About</a></li>
+          <li class="nav-list-item"><a href="about.html">About</a></li>
           <li class="nav-list-item nav-product">
             <p>Product</p>
             <img src="images/down.png">
             <ul class="product-list">
-              <li class="product-list-item"><a href="https://www.google.co.jp/">なかむら参 様</a></li>
-              <li class="product-list-item"><a href="https://www.google.co.jp/">Treasure Studio 様</a></li>
-              <li class="product-list-item"><a href="https://www.google.co.jp/">ポートフォリオ</a></li>
+              <li class="product-list-item"><a href="NakamuraSan.html">なかむら参 様</a></li>
+              <li class="product-list-item"><a href="TreasureStudio.html">Treasure Studio 様</a></li>
+              <li class="product-list-item"><a href="portfolio.html">ポートフォリオ</a></li>
             </ul>
           </li>
-          <li class="nav-list-item"><a href="https://www.google.co.jp/">Contact</a></li>
+          <li class="nav-list-item"><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
       <button class="hamburger" type="button">
@@ -38,7 +38,7 @@
       </button>
     </div>
   </header>
-  <main>
+  <main class="fadeIn">
     <div class="container">
       <section class="mv">
         <img src="images/hands_yellow.png" class="mv-img">
@@ -50,7 +50,7 @@
             <h2 class="top-section-title">About</h2>
             <p class="top-text">名古屋市在住の好奇心旺盛な28歳。ソフトウェア開発・販売業の会社にプログラマ－として従事。2020年12月に退職に、未経験のWeb業界に挑戦。「心で寄り添い、困っている人に手を差し伸べられる人」を目指す。</p>
             <div class="btn-wrapper">
-              <a href="#" class="top-btn">詳しく知る</a>
+              <a href="about.html" class="top-btn">詳しく知る</a>
             </div>
           </div>
           <div class="icon-wrapper">
@@ -64,7 +64,7 @@
         <div class="section-wrapper">
           <div class="top-section-content">
             <h2 class="top-section-title">Product</h2>
-            <a href="https://www.google.co.jp/" class="product-link">
+            <a href="NakamuraSan.html" class="product-link">
               <div class="product-link-parent">
                 <img src="images/product/nakamurasan.png" alt="なかむら参様のモックアップ">
                 <div class="product-link-hover">
@@ -72,7 +72,7 @@
                 </div>
               </div>
             </a>
-            <a href="https://www.google.co.jp/" class="product-link">
+            <a href="TreasureStudio.html" class="product-link">
               <div class="product-link-parent">
                 <img src="images/product/TreasureStudio.png" alt="TreasureStudio様のモックアップ">
                 <div class="product-link-hover">
@@ -80,7 +80,7 @@
                 </div>
               </div>
             </a>
-            <a href="https://www.google.co.jp/" class="product-link">
+            <a href="portfolio.html" class="product-link">
               <div class="product-link-parent">
                 <img src="images/product/nakamurasan.png" alt="ポートフォリオのモックアップ">
                 <div class="product-link-hover">
@@ -104,7 +104,7 @@
             <h2 class="top-section-title">Contact</h2>
             <p class="top-text">当ポートフォリオサイトに関するご質問や、お仕事のご相談（愛知県名古屋市を中心に、雇用していただける企業様を探しております。）など、お気軽にお問い合わせください。</p>
             <div class="btn-wrapper">
-              <a href="#" class="top-btn">お問い合わせはこちら</a>
+              <a href="contact.html" class="top-btn">お問い合わせはこちら</a>
             </div>
           </div>
           <div class="icon-wrapper">
@@ -113,12 +113,24 @@
           </div>
         </div>
       </section>
+      <a href="#" class="link-top">TOP</a>
     </div>
   </main>
   <footer>
     <p>©Kazuma Katayori</p>
   </footer>
   <script>
+
+    ///////////////////////
+    //ページ内リンクのスムーズスクロール
+    $('a[href^="#"]').click(function () {
+      const speed = 750;
+      const valHref = $(this).attr('href');
+      const target = $( valHref =='#' || valHref == '' ? 'html' : valHref );
+      const pos = $(target).offset().top;
+      $('body, html').animate( {scrollTop:pos}, speed, 'swing');  
+    });
+
     ///////////////////////
     // ハンバーガーメニューのクラストグル
     $('.hamburger').click(function () {

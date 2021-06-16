@@ -15,6 +15,24 @@ body
   font-family: "メイリオ", sans-serif;
 }
 
+.fadeIn
+{
+  animation: fade 2s;
+}
+
+@keyframes fade
+{
+  0%
+  {
+    opacity: 0;
+  }
+
+  100%
+  {
+    opacity: 1;
+  }
+}
+
 .container
 {
   width: 90%;
@@ -36,6 +54,39 @@ section
   position: absolute;
 }
 
+.link-top
+{
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  padding-right: 35px;
+  font-size: 40px;
+  font-family: 'Concert One', cursive;
+  transform: rotate(-90deg);
+  line-height: 1;
+  color: #4c5a80;
+  border-bottom: solid 3px;
+  transition: all 0.3s ease;
+}
+
+.link-top:hover
+{
+  opacity: 0.8;
+}
+
+.link-top::before 
+{
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+  width: 15px;
+  border-bottom: solid 3px;
+  transform: rotate(30deg);
+  transform-origin: right top;
+}
+
 @media (max-width: 768px)
 {
   html, body
@@ -49,9 +100,30 @@ section
     overflow: hidden;
   }
 
+  .container
+  {
+    width: 80%;
+  }
+
   section
   {
     margin-bottom: 50px;
+  }
+
+  .link-top
+  {
+    right: 0;
+    bottom: 70px;
+    padding-right: 20px;
+    font-size: 20px;
+    border-bottom: solid 1px;
+  }
+
+  .link-top::before 
+  {
+    bottom: -1px;
+    width: 10px;
+    border-bottom: solid 1px;
   }
 }
 
@@ -89,6 +161,20 @@ nav
   color: #4c5a80;
   font-size: 30px;
   font-family: 'Concert One', cursive;
+}
+
+.nav-list-item a::after
+{
+  display: block;
+  width: 0;
+  border-bottom: solid 2px #4c5a80;
+  content: '';
+  transition: all .3s ease;
+}
+
+.nav-list-item a:hover::after
+{
+  width: 100%;
 }
 
 .nav-product
@@ -172,7 +258,7 @@ nav
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
     z-index: -1000;
   }
   
@@ -243,7 +329,7 @@ nav
     display: block;
     background: #4c5a80;
     height: 2px;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s ease;
   }
   
   .hamburger::before
@@ -389,6 +475,12 @@ footer p
   color: #fff;
   font-size: 20px;
   border-radius: 10px;
+  transition: all .3s ease;
+}
+
+.top-btn:hover
+{
+  opacity: 0.8;
 }
 
 .icon-wrapper
